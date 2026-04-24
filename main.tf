@@ -1,18 +1,9 @@
-resource "aws_s3_bucket" "class" {
-  bucket = var.bucket_name 
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+module "ec2"{
+  source = "./modules/ec2"
 }
-
-resource "aws_instance" "class" {
-  ami           = var.ami_id
-  instance_type = var.instancetype
-  
-
-  tags = {
-    Name = "terraform-class-instance"
-  }
+module "s3"{
+  source = "./modules/s3"
+}
+module "vpc"{
+  source = "./modules/vpc"
 }
