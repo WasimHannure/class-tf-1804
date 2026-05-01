@@ -1,4 +1,4 @@
-name: deploy terraform code
+name: destroy terraform code
 
 on:
   workflow_dispatch:  # This allows the workflow to be triggered manually from the GitHub Actions tab
