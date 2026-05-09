@@ -7,3 +7,7 @@ module "vpc"{
 module "iam"{
   source = "./modules/iam"
 }
+
+module "ec2"{
+  source = "./modules/ec2"
+}
